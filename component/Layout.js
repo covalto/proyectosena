@@ -1,0 +1,21 @@
+import { ToastContainer } from "react-toastify";
+import { Navbar } from "./Navbar";
+import { Footer } from "./footer";
+
+export function Layout({ children }) {
+  return (
+    <>
+      <Navbar />
+      <div className="bg-gray-100 h-screen p-10">
+        <div className="container mx-auto h-full">
+          {children}
+          <div className="container flex-wrap items-center justify-between">
+            <Footer />
+          </div>
+        </div>
+      </div>
+
+      <ToastContainer />
+    </>
+  );
+}
